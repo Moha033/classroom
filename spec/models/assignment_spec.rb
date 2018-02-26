@@ -5,6 +5,19 @@ require "rails_helper"
 RSpec.describe Assignment, type: :model do
   it_behaves_like "a default scope where deleted_at is not present"
 
+  describe "invitations_are_enabled default" do
+    it "sets invitations_are_enabled to true by default" do
+      options = {
+        organization: create(:organization),
+        slug: "assignment-1"
+      }
+
+      assignment = create(:assignment, { title: "foo" }.merge(options))
+
+      expect(assignment.invitations_are_enabled).to be_truthy
+    end
+  end
+
   describe "slug uniqueness" do
     it "verifes that the slug is unique even if the titles are unique" do
       options = {

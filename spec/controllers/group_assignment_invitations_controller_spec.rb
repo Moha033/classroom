@@ -130,6 +130,16 @@ RSpec.describe GroupAssignmentInvitationsController, type: :controller do
         patch :accept_invitation, params: { id: invitation.key, group: { title: "Code Squad" } }
       end
 
+      it "fails if assignment invitations are disabled" do
+        group_assignment.invitations_are_enabled = false
+        group_assignment.save
+
+        patch :accept_invitation, params: { id: invitation.key, group: { title: "Code Squad" } }
+
+        expect(flash[:error]).to be_present
+        expect(response).to render_template("group_assignment_invitations/show")
+      end
+
       it "does not allow users to join a group that is not apart of the grouping" do
         other_grouping = create(:grouping, organization: organization)
         other_group    = Group.create(title: "The Group", grouping: other_grouping)
