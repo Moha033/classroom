@@ -1,0 +1,29 @@
+ Q1  Design , Using Inheritance , a class structure to hold details of all employees of a Company.
+
+
+Q2  Write a Program to implement a burglar alarm, using the classes supplied with the calculator program. 
+    Your Program should take input from a numeric keypad and check it against a known four-figure sequence. 
+    Provide methods for the user to change the keycode and to display an "ALARM" message when the code is entered wrongly.
+
+
+Q3  Write a class called Current Account that includes methods to deposit and withdraw money and to inspect the balance.
+    Make three instances called Fred, Jane and Tom. 
+    Initialize them all with the same amount money and withdraw different amount from different account. Get the balance printed to the screen. 
+    What can you deduce from this exercise about the object in the computers's memory?
+
+
+Q4  Write a Program to print five asteriks across the page
+
+Q5  Using a control structure, change the program to print a square made of asteriks?
+
+Q6  Modify this program to create a right angled triangle.(Hint:You can print a blank spaces)
+
+Q7  Write a program to store three names in an array. 
+    If two of the names are identical the program should emit the warning "This password has already been chosen!"
+
+
+Q8. Write a program to create a simple basic Calculator?
+
+
+Q9. Write a program to create a mathematical calculator that  display the result?
+
